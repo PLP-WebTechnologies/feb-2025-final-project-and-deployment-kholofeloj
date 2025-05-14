@@ -4,6 +4,8 @@
 :root {
     --base-color:rgb(219, 219, 219);
     --base-variant:rgb(227, 227, 227);
+    --footer-color: rgb(29, 21, 35);
+    --footer-text: rgb(227, 227, 227);
     --text-color: rgb(22, 22, 22);
     --secondary-text: rgb(119, 119, 119);
     --primary-color: rgb(74, 48, 108);
@@ -13,6 +15,8 @@
 .darkmode {
     --base-color: rgb(22, 22, 22);
     --base-variant: rgb(44, 44, 44);
+    --footer-color: rgb(227, 227, 227);
+    --footer-text: rgb(29, 21, 35);
     --text-color: rgb(227, 227, 227);
     --secondary-text: rgb(119, 119, 119);
     --primary-color: rgb(74, 48, 108);
@@ -138,6 +142,10 @@ body {
 /* ---------------------------*/
 /* Main styles */
 /* ---------------------------*/
+main {
+    padding-bottom: 100px;
+}
+
 
 .blog-items {
     display: flex;
@@ -194,4 +202,56 @@ body {
 
 .blog-item-excerpt {
     margin-top: 10px;
+}
+
+
+
+/* ------------------------------------- */
+/* footer Styles
+/* --------------------------------------*/
+
+.footer {
+    width: 100%;
+    background-color: var(--base-variant);
+    padding-top: 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    width: 250px;
+    height: 100px;
+    padding-bottom: 25px;
+}
+
+.footer-title {
+    padding-bottom: 15px;
+}
+
+.footer-links .quick-link {
+    transition: all 0.3s ease;
+    padding-bottom: 15px;
+    
+}
+
+.quick-link:hover {
+    color: var(--accent-color);
+}
+
+.v-divider {
+    height: 50px;
+    width: 2px;
+    background-color: var(--footer-color);
+}
+
+.footer-bottom {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
