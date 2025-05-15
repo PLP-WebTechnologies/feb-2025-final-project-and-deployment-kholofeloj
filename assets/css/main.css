@@ -223,6 +223,38 @@ main {
 }
 
 
+/*--------------------------------------*/
+/*-----------Blog Posts-----------------*/
+/*--------------------------------------*/
+
+.blogs {
+}
+
+.blogs .blog-post {
+    min-height: 600px;
+    background-color: var(--base-variant);
+    padding: 125px 10px ;
+}
+
+.article-title {
+    max-width: 640px;
+}
+
+.article-title-big {
+    font-family: 'Merriweather';
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.article-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
 /* -------------------------------------*/
 /*--------- About Us Page --------------*/
 /*--------------------------------------*/
@@ -245,6 +277,7 @@ main {
 
 .footer-top {
     display: flex;
+    height: 300px;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
