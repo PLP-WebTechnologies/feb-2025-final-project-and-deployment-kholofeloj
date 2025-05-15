@@ -128,46 +128,7 @@ body {
     background-color: var(--text-color);
 }
 
-@media (max-width: 768px){
-    .hamburger {
-        display: block;
-    }
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        height: 80vh;
-        flex-direction: column;
-        gap: 0;
-        background-color: var(--base-variant);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    
-}
 
 #theme-switch {
     height: 50px;
@@ -206,6 +167,7 @@ main {
 .blog-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
     margin-top: 100px;
 }
@@ -261,6 +223,15 @@ main {
 }
 
 
+/* -------------------------------------*/
+/*--------- About Us Page --------------*/
+/*--------------------------------------*/
+
+.about {
+    padding-top: 250px;
+}
+
+
 
 /* ------------------------------------- */
 /* footer Styles
@@ -280,7 +251,7 @@ main {
 }
 
 .footer-about, .footer-links, .footer-contact {
-    width: 250px;
+    max-width: 250px;
     height: 100px;
     padding-bottom: 25px;
 }
@@ -310,4 +281,88 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+@media (max-width: 768px){
+    
+    p {
+        font-size: 1.2rem;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        height: 80vh;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--base-variant);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* -------------------------*/
+    /*------ Blog Posts --------*/
+
+
+    .blog-items {
+        width: 100%;
+
+        /* gap: 20px; */
+        margin-top: 100px;
+    }
+
+    .blog-item {
+        min-width: 100%;
+    }
+
+    .v-divider {
+        min-width: 280px;
+        height: 1px;
+        background-color: var(--base-color);
+    }
+
+    .footer-top {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+
 }
